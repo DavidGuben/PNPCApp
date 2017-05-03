@@ -23,18 +23,14 @@ export default class pnpcApp extends Component {
         />
 
         <View style={styles.LogoContainer}>
-          <View style={styles.pnpcLogoBox}>
             <Image
             style={styles.pnpcLogo}
             source={require('./img/PNPCLogo.png')}
             />
-          </View>
-          <View style={styles.BNBLogoBox}>
             <Image
             style={styles.BNBLogo}
             source={require('./img/BNBLogo.png')}
             />
-          </View>
         </View>
 
         <Image
@@ -87,13 +83,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   pnpcLogo: {
-
+    right: 20
   },
   pnpcLogoBox: {
 
   },
   BNBLogo: {
-
+    left: 20
   },
   phoneNumber: {
 
