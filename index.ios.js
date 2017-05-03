@@ -17,7 +17,6 @@ export default class pnpcApp extends Component {
   render() {
     return (
       <View style={styles.container}>
-
         <Image
         style={styles.PawPrintTop}
         source={require('./img/PawPrintTop.png')}
@@ -44,12 +43,26 @@ export default class pnpcApp extends Component {
         />
 
         <View style={styles.buttonBox}>
-        <Button
-        style={styles.button01}
-        onPress={onButtonPress}
-        title="Visit Our Website"
-        color="blue"
-        />
+          <Button
+          style={styles.button01}
+          onPress={onButtonPress}
+          title="Groom My Dog"
+          color="blue"
+          />
+
+          <Button
+          style={styles.button01}
+          onPress={onButtonPress}
+          title="Board My Dog"
+          color="blue"
+          />
+
+          <Button
+          style={styles.button01}
+          onPress={onButtonPress}
+          title="Visit Our Website"
+          color="blue"
+          />
         </View>
 
         <Image
@@ -69,7 +82,7 @@ const styles = StyleSheet.create({
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
@@ -77,31 +90,27 @@ const styles = StyleSheet.create({
 
   },
   pnpcLogoBox: {
-    flex: 1,
 
   },
   BNBLogo: {
 
   },
   phoneNumber: {
-    margin: 50,
-    flex: 1
+
   },
   PawPrintTop: {
     flex: 1,
-    marginTop: -80
   },
   PawPrintBottom: {
-    flex: 1,
-    marginTop: 50
+
   },
-  button01: {},
+  button01: {
+    flex: 1,
+  },
   button02: {},
   buttonBox: {},
   LogoContainer: {
-    flex: 1,
     flexDirection: 'row',
-    margin: 35
   }
 
 });
