@@ -1,31 +1,56 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Button,
+  Alert,
+  Image
 } from 'react-native';
+
+const onButtonPress = () => {
+  Alert.alert('Button has been pressed!');
+};
 
 export default class pnpcApp extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Image
+        style={styles.PawPrintTop}
+        source={require('./img/PawPrintTop.png')}
+        />
+
+        <Image
+        style={styles.phoneNumber}
+        source={require('./img/phoneNumber.png')}
+        />
+
+        <Image
+        style={styles.pnpcLogo}
+        source={require('./img/PNPCLogo.png')}
+        />
+
+        <Image
+        style={styles.BNBLogo}
+        source={require('./img/BNBLogo.png')}
+        />
+
+        <Button
+        style={styles.button01}
+        onPress={onButtonPress}
+        title="Visit Our Website"
+        color="blue"
+        />
+
+        <Image
+        style={styles.PawPrintBottom}
+        source={require('./img/PawPrintBottom.png')}
+        />
+
+
+
       </View>
     );
   }
@@ -34,20 +59,19 @@ export default class pnpcApp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  pnpcLogo: {},
+  BNBLogo: {},
+  phoneNumber: {},
+  PawPrintTop: {},
+  PawPrintBottom: {},
+  button01: {},
+  button02: {}
+
 });
 
 AppRegistry.registerComponent('pnpcApp', () => pnpcApp);
