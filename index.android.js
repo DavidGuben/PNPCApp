@@ -17,32 +17,40 @@ export default class pnpcApp extends Component {
   render() {
     return (
       <View style={styles.container}>
+
         <Image
         style={styles.PawPrintTop}
         source={require('./img/PawPrintTop.png')}
         />
 
-        <Image
-        style={styles.phoneNumber}
-        source={require('./img/phoneNumber.png')}
-        />
+        <View style={styles.LogoContainer}>
+          <View style={styles.pnpcLogoBox}>
+            <Image
+            style={styles.pnpcLogo}
+            source={require('./img/PNPCLogo.png')}
+            />
+          </View>
+          <View style={styles.BNBLogoBox}>
+            <Image
+            style={styles.BNBLogo}
+            source={require('./img/BNBLogo.png')}
+            />
+          </View>
+        </View>
 
         <Image
-        style={styles.pnpcLogo}
-        source={require('./img/PNPCLogo.png')}
+        style={styles.PhoneNumber}
+        source={require('./img/PhoneNumber.png')}
         />
 
-        <Image
-        style={styles.BNBLogo}
-        source={require('./img/BNBLogo.png')}
-        />
-
+        <View style={styles.buttonBox}>
         <Button
         style={styles.button01}
         onPress={onButtonPress}
         title="Visit Our Website"
         color="blue"
         />
+        </View>
 
         <Image
         style={styles.PawPrintBottom}
@@ -59,18 +67,42 @@ export default class pnpcApp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  pnpcLogo: {},
-  BNBLogo: {},
-  phoneNumber: {},
-  PawPrintTop: {},
-  PawPrintBottom: {},
+  pnpcLogo: {
+
+  },
+  pnpcLogoBox: {
+    flex: 1,
+
+  },
+  BNBLogo: {
+
+  },
+  phoneNumber: {
+    margin: 50,
+    flex: 1
+  },
+  PawPrintTop: {
+    flex: 1,
+    marginTop: -80
+  },
+  PawPrintBottom: {
+    flex: 1,
+    marginTop: 50
+  },
   button01: {},
-  button02: {}
+  button02: {},
+  buttonBox: {},
+  LogoContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    margin: 35
+  }
 
 });
 
