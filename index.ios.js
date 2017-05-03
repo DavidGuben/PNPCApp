@@ -46,11 +46,12 @@ export default class pnpcApp extends Component {
             source={require('./img/BNBLogo.png')}
             />
         </View>
-
-        <Image
-        style={styles.PhoneNumber}
-        source={require('./img/PhoneNumber.png')}
-        />
+        <View style={styles.phoneNumberBox}>
+          <Image
+          style={styles.PhoneNumber}
+          source={require('./img/PhoneNumber.png')}
+          />
+        </View>
 
         <View style={styles.buttonBox}>
           <Button
@@ -105,21 +106,25 @@ const styles = StyleSheet.create({
   BNBLogo: {
     left: 20
   },
-  phoneNumber: {
-
+  phoneNumberBox: {
+    flex: 1,
+    marginBottom: 20
   },
   PawPrintTop: {
-    flex: 1,
+    bottom: 40
   },
   PawPrintBottom: {
-
+    top: 50
   },
   button01: {
     flex: 1,
-
+    marginBottom: 20
   },
   button02: {},
-  buttonBox: {},
+  buttonBox: {
+    flex: 1,
+    flexDirection: 'column'
+  },
   LogoContainer: {
     flexDirection: 'row',
   }
