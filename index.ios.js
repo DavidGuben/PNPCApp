@@ -4,13 +4,27 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   Alert,
-  Image
+  Image,
+  Linking
 } from 'react-native';
+import { Button, Card } from 'react-native-material-design';
 
-const onButtonPress = () => {
-  Alert.alert('Button has been pressed!');
+
+const onButtonPress01 = () => {
+  // Alert.alert('Button has been pressed!');
+  Linking.openURL('https://crm.pawfinity.com/pawsnposeinc/application/').catch(err => console.error('An error occurred', err));
+
+};
+const onButtonPress02 = () => {
+  // Alert.alert('Button has been pressed!');
+  Linking.openURL('#').catch(err => console.error('An error occurred', err));
+
+};
+const onButtonPress03 = () => {
+  // Alert.alert('Button has been pressed!');
+  Linking.openURL('https://www.pawsnposecuttery.com').catch(err => console.error('An error occurred', err));
+
 };
 
 export default class pnpcApp extends Component {
@@ -41,22 +55,24 @@ export default class pnpcApp extends Component {
         <View style={styles.buttonBox}>
           <Button
           style={styles.button01}
-          onPress={onButtonPress}
-          title="Groom My Dog"
+          onPress={onButtonPress01}
+          raised={true}
+          text="Groom My Dog"
           color="blue"
           />
 
           <Button
           style={styles.button01}
-          onPress={onButtonPress}
-          title="Board My Dog"
+          onPress={onButtonPress02}
+          raised={true}
+          text="Board My Dog"
           color="blue"
           />
 
           <Button
           style={styles.button01}
-          onPress={onButtonPress}
-          title="Visit Our Website"
+          onPress={onButtonPress03}
+          text="Visit Our Website"
           color="blue"
           />
         </View>
@@ -65,8 +81,6 @@ export default class pnpcApp extends Component {
         style={styles.PawPrintBottom}
         source={require('./img/PawPrintBottom.png')}
         />
-
-
 
       </View>
     );
@@ -102,6 +116,7 @@ const styles = StyleSheet.create({
   },
   button01: {
     flex: 1,
+
   },
   button02: {},
   buttonBox: {},
