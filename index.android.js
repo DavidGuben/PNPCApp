@@ -6,7 +6,8 @@ import {
   View,
   Alert,
   Image,
-  Linking
+  Linking,
+  ScrollView
 } from 'react-native';
 import { Button, Card } from 'react-native-material-design';
 
@@ -30,60 +31,64 @@ const onButtonPress03 = () => {
 export default class pnpcApp extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Image
-        style={styles.PawPrintTop}
-        source={require('./img/PawPrintTop.png')}
-        />
-
-        <View style={styles.LogoContainer}>
-            <Image
-            style={styles.pnpcLogo}
-            source={require('./img/PNPCLogo.png')}
-            />
-            <Image
-            style={styles.BNBLogo}
-            source={require('./img/BNBLogo.png')}
-            />
-        </View>
-        <View style={styles.phoneNumberBox}>
+      <ScrollView>
+        <View style={styles.container}>
+        <View style={styles.PawPrintBox}>
           <Image
-          style={styles.PhoneNumber}
-          source={require('./img/PhoneNumber.png')}
+          style={styles.PawPrintTop}
+          source={require('./img/PawPrintTop.png')}
           />
         </View>
 
-        <View style={styles.buttonBox}>
-          <Button
-          style={styles.button01}
-          onPress={onButtonPress01}
-          raised={true}
-          text="Groom My Dog"
-          color="blue"
-          />
+          <View style={styles.LogoContainer}>
+              <Image
+              style={styles.pnpcLogo}
+              source={require('./img/PNPCLogo.png')}
+              />
+              <Image
+              style={styles.BNBLogo}
+              source={require('./img/BNBLogo.png')}
+              />
+          </View>
+          <View style={styles.phoneNumberBox}>
+            <Image
+            style={styles.PhoneNumber}
+            source={require('./img/PhoneNumber.png')}
+            />
+          </View>
 
-          <Button
-          style={styles.button01}
-          onPress={onButtonPress02}
-          raised={true}
-          text="Board My Dog"
-          color="blue"
-          />
+          <View style={styles.buttonBox}>
+            <Button
+            style={styles.button01}
+            onPress={onButtonPress01}
+            raised={true}
+            text="Groom My Dog"
+            color="blue"
+            />
 
-          <Button
-          style={styles.button01}
-          onPress={onButtonPress03}
-          text="Visit Our Website"
-          color="blue"
+            <Button
+            style={styles.button01}
+            onPress={onButtonPress02}
+            raised={true}
+            text="Board My Dog"
+            color="blue"
+            />
+
+            <Button
+            style={styles.button01}
+            onPress={onButtonPress03}
+            text="Visit Our Website"
+            color="blue"
+            />
+          </View>
+
+          <Image
+          style={styles.PawPrintBottom}
+          source={require('./img/PawPrintBottom.png')}
           />
         </View>
+      </ScrollView>
 
-        <Image
-        style={styles.PawPrintBottom}
-        source={require('./img/PawPrintBottom.png')}
-        />
-
-      </View>
     );
   }
 }
@@ -112,6 +117,9 @@ const styles = StyleSheet.create({
   },
   PawPrintTop: {
     bottom: 40
+  },
+  PawPrintBox: {
+    flex: 2
   },
   PawPrintBottom: {
     top: 50
